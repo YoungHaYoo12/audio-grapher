@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-06-09T04:22:48.176Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="r0JvOUKZgJewPf4YMs35" version="14.7.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-09T04:25:22.030Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="wCtoDpedz8__KRm_miVZ" version="14.7.6" type="github">
   <diagram id="38veM0duc0hDk3mzZci5" name="Page-1">
-    <mxGraphModel dx="1594" dy="948" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1936" dy="1151" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -70,32 +70,47 @@
         <mxCell id="pTLriYblKHoEXfj9Ryow-8" value="lip_data: string&lt;br&gt;wav_data: bytes&lt;br&gt;emotion_data: int32&lt;br&gt;dm_state: string" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="305" y="150" width="190" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-32" value="Demo Client" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="590" width="120" height="60" as="geometry" />
+        <mxCell id="pTLriYblKHoEXfj9Ryow-44" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="660" y="620" width="600" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-33" value="The demo client provides a query to the Dialogue Manager server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="170" y="610" width="450" height="20" as="geometry" />
+        <mxCell id="pTLriYblKHoEXfj9Ryow-34" value="Dialogue Manager Server &lt;br&gt;(GRPC1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-44">
+          <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-34" value="Dialogue Manager Server &lt;br&gt;(GRPC1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="810" width="120" height="60" as="geometry" />
+        <mxCell id="pTLriYblKHoEXfj9Ryow-35" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The Dialogue Manager Server receives a query from the demo client.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server takes the user_id of the demo client (passed in via metadata) and retrieves its matching Dialogue Manager instance.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server generates emotion data (currently randomly set to 0 or 1)&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server queries the Dialogue Manager instance to retrieve the chatbot name and the chatbot state that is relevant to the demo client&#39;s query&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server sends the chatbot name, chatbot state, the demo client&#39;s text, and the emotion data to the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server receives lip data, wav data, and the new chatbot state from the Chatbot Server. It updates the Dialogue Manager instance&#39;s state to the new chatbot state, and it sends the lip data and wav data to the Demo Client&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-44">
+          <mxGeometry x="150" y="20" width="450" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-35" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The Dialogue Manager Server receives a query from the demo client.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server takes the user_id of the demo client (passed in via metadata) and retrieves its matching Dialogue Manager instance.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server generates emotion data (currently randomly set to 0 or 1)&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server queries the Dialogue Manager instance to retrieve the chatbot name and the chatbot state that is relevant to the demo client&#39;s query&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server sends the chatbot name, chatbot state, the demo client&#39;s text, and the emotion data to the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server receives lip data, wav data, and the new chatbot state from the Chatbot Server. It updates the Dialogue Manager instance&#39;s state to the new chatbot state, and it sends the lip data and wav data to the Demo Client&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="230" y="830" width="450" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-37" value="Chatbot Server (GRPC2)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="1190" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pTLriYblKHoEXfj9Ryow-35" target="pTLriYblKHoEXfj9Ryow-35">
+        <mxCell id="pTLriYblKHoEXfj9Ryow-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="pTLriYblKHoEXfj9Ryow-44" source="pTLriYblKHoEXfj9Ryow-35" target="pTLriYblKHoEXfj9Ryow-35">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-40" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;&lt;span&gt;The Chatbot Server receives the chatbot name, chatbot state, demo client&#39;s text, and emotion data from the Dialogue Manager Server.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;The Chatbot Server retrieves the Chatbot instance that matches the chatbot name. It passes in the chatbot state and the demo client&#39;s text to the chatbot instance and receives the chatbot&#39;s answer and the new chatbot state.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server sends the chatbot&#39;s answer and the emotion data to the TTS Server.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server receives the lip data and wav data from the TTS Server.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server returns the lip data, wav data, and the new chatbot state to the Dialogue Manager Server&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="230" y="1050" width="450" height="340" as="geometry" />
+        <mxCell id="pTLriYblKHoEXfj9Ryow-45" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="10" y="620" width="540" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-42" value="TTS Server&lt;br&gt;(GRPC3)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="1510" width="120" height="60" as="geometry" />
+        <mxCell id="pTLriYblKHoEXfj9Ryow-32" value="Demo Client" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-45">
+          <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-43" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The TTS Server receives the chatbot answer and emotion data from the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;li&gt;The TTS Server generates lip data and wav data via TTS Lipsync&amp;nbsp;&lt;/li&gt;&lt;li&gt;The TTS Server returns the lip data and wav data to the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="240" y="1370" width="450" height="340" as="geometry" />
+        <mxCell id="pTLriYblKHoEXfj9Ryow-33" value="The demo client provides a query to the Dialogue Manager server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-45">
+          <mxGeometry x="90" y="20" width="450" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-46" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="10" y="830" width="600" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-37" value="Chatbot Server (GRPC2)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-46">
+          <mxGeometry y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-40" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;&lt;span&gt;The Chatbot Server receives the chatbot name, chatbot state, demo client&#39;s text, and emotion data from the Dialogue Manager Server.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;The Chatbot Server retrieves the Chatbot instance that matches the chatbot name. It passes in the chatbot state and the demo client&#39;s text to the chatbot instance and receives the chatbot&#39;s answer and the new chatbot state.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server sends the chatbot&#39;s answer and the emotion data to the TTS Server.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server receives the lip data and wav data from the TTS Server.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server returns the lip data, wav data, and the new chatbot state to the Dialogue Manager Server&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-46">
+          <mxGeometry x="150" width="450" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-47" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="665" y="820" width="610" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-42" value="TTS Server&lt;br&gt;(GRPC3)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-47">
+          <mxGeometry y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-43" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The TTS Server receives the chatbot answer and emotion data from the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;li&gt;The TTS Server generates lip data and wav data via TTS Lipsync&amp;nbsp;&lt;/li&gt;&lt;li&gt;The TTS Server returns the lip data and wav data to the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="pTLriYblKHoEXfj9Ryow-47">
+          <mxGeometry x="160" width="450" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-51" value="Chatbot Interaction Process" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="275" y="10" width="220" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
