@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-09T04:21:19.997Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="QUli3TKk4DHV2sSQ_4aQ" version="14.7.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-09T04:22:48.176Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="r0JvOUKZgJewPf4YMs35" version="14.7.6" type="github">
   <diagram id="38veM0duc0hDk3mzZci5" name="Page-1">
     <mxGraphModel dx="1594" dy="948" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -94,7 +94,7 @@
         <mxCell id="pTLriYblKHoEXfj9Ryow-42" value="TTS Server&lt;br&gt;(GRPC3)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="80" y="1510" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="pTLriYblKHoEXfj9Ryow-43" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The TTS Server&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="pTLriYblKHoEXfj9Ryow-43" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The TTS Server receives the chatbot answer and emotion data from the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;li&gt;The TTS Server generates lip data and wav data via TTS Lipsync&amp;nbsp;&lt;/li&gt;&lt;li&gt;The TTS Server returns the lip data and wav data to the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="240" y="1370" width="450" height="340" as="geometry" />
         </mxCell>
       </root>
