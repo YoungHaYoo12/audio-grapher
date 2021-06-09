@@ -1,1 +1,103 @@
-<mxfile host="app.diagrams.net" modified="2021-06-09T02:12:55.834Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" version="14.7.6" etag="ULb8lF2hjzKJzX4OzlLj" type="github"><diagram id="38veM0duc0hDk3mzZci5">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-06-09T04:21:19.997Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="QUli3TKk4DHV2sSQ_4aQ" version="14.7.6" type="github">
+  <diagram id="38veM0duc0hDk3mzZci5" name="Page-1">
+    <mxGraphModel dx="1594" dy="948" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pTLriYblKHoEXfj9Ryow-2" value="TTS Server&lt;br&gt;(GRPC3)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-3" value="Chatbot Server (GRPC2)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-9" value="" style="endArrow=classic;html=1;entryX=0.683;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="pTLriYblKHoEXfj9Ryow-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="722" y="143" as="sourcePoint" />
+            <mxPoint x="450" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-10" value="" style="endArrow=classic;html=1;entryX=0.333;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="pTLriYblKHoEXfj9Ryow-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="680.04" y="400" as="sourcePoint" />
+            <mxPoint x="685" y="143" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-15" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="420" as="sourcePoint" />
+            <mxPoint x="640" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-16" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="450" as="sourcePoint" />
+            <mxPoint x="200" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-17" value="chatbot_name: string&lt;br&gt;state: string&lt;br&gt;text: string&lt;br&gt;emotion_data: int32" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="260" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-18" value="lip_data: string&lt;br&gt;wav_data: bytes&lt;br&gt;state: string" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="260" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-20" value="lip_data: string&lt;br&gt;wav_data: bytes&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="305" y="477" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-21" value="text: string&lt;br&gt;emotion_data: int32" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="305" y="380" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-1" value="Demo Client" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-4" value="Dialogue Manager Server &lt;br&gt;(GRPC1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-5" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pTLriYblKHoEXfj9Ryow-1" target="pTLriYblKHoEXfj9Ryow-4">
+          <mxGeometry x="80" y="70" width="50" height="50" as="geometry">
+            <mxPoint x="400" y="380" as="sourcePoint" />
+            <mxPoint x="450" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-6" value="query: string" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="70" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-7" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="pTLriYblKHoEXfj9Ryow-4" target="pTLriYblKHoEXfj9Ryow-1">
+          <mxGeometry x="80" y="70" width="50" height="50" as="geometry">
+            <mxPoint x="180" y="180" as="sourcePoint" />
+            <mxPoint x="150" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-8" value="lip_data: string&lt;br&gt;wav_data: bytes&lt;br&gt;emotion_data: int32&lt;br&gt;dm_state: string" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="305" y="150" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-32" value="Demo Client" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-33" value="The demo client provides a query to the Dialogue Manager server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="610" width="450" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-34" value="Dialogue Manager Server &lt;br&gt;(GRPC1)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-35" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The Dialogue Manager Server receives a query from the demo client.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server takes the user_id of the demo client (passed in via metadata) and retrieves its matching Dialogue Manager instance.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server generates emotion data (currently randomly set to 0 or 1)&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server queries the Dialogue Manager instance to retrieve the chatbot name and the chatbot state that is relevant to the demo client&#39;s query&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server sends the chatbot name, chatbot state, the demo client&#39;s text, and the emotion data to the Chatbot Server&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Dialogue Manager Server receives lip data, wav data, and the new chatbot state from the Chatbot Server. It updates the Dialogue Manager instance&#39;s state to the new chatbot state, and it sends the lip data and wav data to the Demo Client&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="830" width="450" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-37" value="Chatbot Server (GRPC2)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pTLriYblKHoEXfj9Ryow-35" target="pTLriYblKHoEXfj9Ryow-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-40" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;&lt;span&gt;The Chatbot Server receives the chatbot name, chatbot state, demo client&#39;s text, and emotion data from the Dialogue Manager Server.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;The Chatbot Server retrieves the Chatbot instance that matches the chatbot name. It passes in the chatbot state and the demo client&#39;s text to the chatbot instance and receives the chatbot&#39;s answer and the new chatbot state.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server sends the chatbot&#39;s answer and the emotion data to the TTS Server.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server receives the lip data and wav data from the TTS Server.&amp;nbsp;&lt;/li&gt;&lt;li&gt;The Chatbot Server returns the lip data, wav data, and the new chatbot state to the Dialogue Manager Server&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1050" width="450" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-42" value="TTS Server&lt;br&gt;(GRPC3)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pTLriYblKHoEXfj9Ryow-43" value="&lt;br&gt;Role:&lt;br&gt;&lt;ol&gt;&lt;li&gt;The TTS Server&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1370" width="450" height="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
